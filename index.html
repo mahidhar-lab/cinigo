@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .header {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .filter {
+            margin: 20px;
+        }
+        .movie-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .movie-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+        .movie-card img {
+            width: 200px;
+            height: 300px;
+        }
+        .movie-card h3 {
+            margin: 10px 0 5px;
+        }
+        .movie-card p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .book-btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .book-btn:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Movie Ticket Booking</div>
+    <div class="filter">
+        <label for="genre">Filter by Genre: </label>
+        <select id="genre">
+            <option value="all">All</option>
+            <option value="action">Action</option>
+            <option value="drama">Drama</option>
+            <option value="comedy">Comedy</option>
+        </select>
+    </div>
+    <div class="movie-container">
+        <div class="movie-card">
+            <img src="https://i.pinimg.com/736x/60/f6/43/60f6438d07c414f36db349badab2db9b.jpg" alt="RRR">
+            <h3>RRR</h3>
+            <p>Rating: 98%</p>
+            <a href="3movie.html">
+            <button class="book-btn">Book Ticket</button>
+            </a>
+        </div>
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Bheemla_Nayak.jpg/220px-Bheemla_Nayak.jpg" alt="Bheemla Nayak">
+            <h3>Bheemla Nayak</h3>
+            <p>Rating: 61%</p>
+            <a href="2ndmovie.html">
+            <button class="book-btn">Book Ticket</button>
+            </a>
+        </div>
+        <div class="movie-card">
+            <img src="https://cdn.cinematerial.com/p/297x/bt0kflgo/guntur-kaaram-indian-movie-poster-md.jpg?v=1703934617" alt="Guntur Karam">
+            <h3>Guntur Karam</h3>
+            <p>Rating: 81%</p>
+            <a href="4movie.html">
+            <button class="book-btn">Book Ticket</button>
+            </a>
+        </div>
+        <div class="movie-card">
+            <img src="https://image.tmdb.org/t/p/original/hhMLtq9m1aK0dpY9Wcq26XeDH2z.jpg" alt="Court: State vs Nobody">
+            <h3>Hi Nanna</h3>
+            <p>Rating: 90%</p>
+            <a href="1stmovie.html">
+            <button class="book-btn">Book Ticket</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #ff8c28;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .movie-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            width: 600px;
+        }
+        .movie-poster {
+            width: 150px;
+            height: 250px;
+            margin-right: 20px;
+        }
+        .movie-details {
+            text-align: left;
+        }
+        .rating, .genre {
+            font-size: 14px;
+            color: gray;
+        }
+        .sound {  
+            background-color: #ffa36a#000;
+            color: rgb(0, 0, 0);
+            padding: 12px 15px;
+            font-family: Lemon Milk regular;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .sound:hover {
+            background-color: #878787;
+        }
+        h3 {
+            margin-top: 15px;
+        }
+        .showtime-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .showtime {
+            background-color: #ff6700;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .showtime:hover {
+            background-color: #e65c00;
+        }
+        .selected-showtime {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie Ticket Booking</h1>
+    </header>
+    <main>
+        <div class="movie-card">
+            <img src="https://image.tmdb.org/t/p/original/hhMLtq9m1aK0dpY9Wcq26XeDH2z.jpg" alt="Movie Poster" class="movie-poster">
+            <div class="movie-details">
+                <h2>Hi Nanna</h2>
+                <p class="rating">UA13+ | 2 hrs 19 mins</p>
+                <p class="genre">Romance, Drama | Telugu</p>
+                <h3>GS Cinemas, Guntur</h3>
+
+                <button class="sound"><b> ~ 84 dB</b></button>
+                
+                
+                <div class="showtime-buttons">
+                    <a href="seat.html">
+                    <button class="showtime">03:00 PM</button>
+                    </a>
+                        <a href="seat.html">
+                            <button class="showtime">09:30 PM</button>
+                            </a>
+                </div>
+                <p class="selected-showtime">Selected Showtime: None</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

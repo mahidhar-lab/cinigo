@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .confirmation-banner {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+        .movie-details {
+            display: flex;
+            gap: 20px;
+        }
+        .movie-details img {
+            width: 200px;
+            border-radius: 5px;
+        }
+        .movie-info h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .payment-summary {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .qr-code {
+            background: #e9ecef;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .proceed-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-banner">
+        ? Booking Confirmed - Your tickets have been sent to your email & phone.
+    </div>
+
+    <div class="container">
+        <div class="movie-details">
+            <img src="https://image.tmdb.org/t/p/original/hhMLtq9m1aK0dpY9Wcq26XeDH2z.jpg" alt="Movie Poster">
+            <div class="movie-info">
+                <h2>Hi Nanna</h2>
+                <p><b>UA13+ | Telugu | 2D</b></p>
+                <p><b>GS Cinemas, guntur</b></p>
+                <p>Mon, 13 Sep '24 | <b>03:00 PM</b></p>
+                <p><b>Seats:</b> First Class - D15, D16</p>
+                <div class="qr-code">QR CODE</div>
+                <p>Short Code: CDXH2GY</p>
+            </div>
+        </div>
+
+        <div class="payment-summary">
+            <h3>Payment Summary</h3>
+            <p><b>Total Amount Paid:</b> ₹334.12</p>
+            <p> <b>2 x Tickets</b> @ ₹147 each</p>
+            <p> <b>Taxes & Fees:</b> ₹40.12</p>
+            <p> <b>Payment Method:</b> UPI</p>
+            <p> Transaction ID: 424668378065</p>
+            <div class="proceed-btn">Download Ticket</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3cd;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff8c00;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .screen {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px;
+            margin: 10px auto;
+            width: 60%;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .seats {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 5px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .seat {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .seat.selected {
+            background-color: #ff8c00;
+        }
+        .seat.booked {
+            background-color: #444;
+            cursor: not-allowed;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend div span {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>Movie Ticket Booking</header>
+    <div class="container">
+        <h2>Select Your Seats</h2>
+        <div class="screen">SCREEN THIS WAY</div>
+        <div class="seats" id="seating-area"></div>
+        <div class="legend">
+            <div><span style="background-color: #ccc;"></span> Available</div>
+            <div><span style="background-color: #444;"></span> Booked</div>
+            <div><span style="background-color: #ff8c00;"></span> Selected</div>
+        </div>
+        <a href="pay2.html">
+        <button class="button" onclick="confirmBooking()">Confirm Booking</button>
+        </a>
+    </div>
+
+    <script>
+        const seatContainer = document.getElementById("seating-area");
+        const rows = 10;
+        const cols = 10;
+        const bookedSeats = [2, 5, 10, 15, 22, 35, 50, 65, 78, 89];
+        
+        function createSeats() {
+            for (let i = 0; i < rows * cols; i++) {
+                const seat = document.createElement("div");
+                seat.classList.add("seat");
+                if (bookedSeats.includes(i)) {
+                    seat.classList.add("booked");
+                } else {
+                    seat.addEventListener("click", () => selectSeat(seat));
+                }
+                seatContainer.appendChild(seat);
+            }
+        }
+        
+        function selectSeat(seat) {
+            if (!seat.classList.contains("booked")) {
+                seat.classList.toggle("selected");
+            }
+        }
+        
+        function confirmBooking() {
+            const selectedSeats = document.querySelectorAll(".seat.selected");
+            if (selectedSeats.length === 0) {
+                alert("Please select at least one seat.");
+                return;
+            }
+            alert(`You have booked ${selectedSeats.length} seat(s).`);
+        }
+        
+        createSeats();
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 60%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        .movie-details {
+            display: flex;
+            gap: 20px;
+        }
+        .movie-details img {
+            width: 150px;
+            border-radius: 5px;
+        }
+        .summary {
+            width: 40%;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .summary h3 {
+            margin-top: 0;
+        }
+        .price-detail {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .pay-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pay-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="movie-details">
+            <img src="https://i.pinimg.com/736x/60/f6/43/60f6438d07c414f36db349badab2db9b.jpg" alt="Movie Poster">
+            <div>
+                <h2>RRR</h2>
+                <p>UA13+ | Telugu | 2D</p>
+                <p>Mythri Cinemas, Guntur</p>
+                <p>Wed, 19 Mar 25₹, 02:30 PM</p>
+            </div>
+        </div>
+        <div class="summary">
+            <h3>Booking Summary</h3>
+            <div class="price-detail">
+                <span>1 Ticket</span>
+                <span>₹177</span>
+            </div>
+            <div class="price-detail">
+                <span>Taxes & Fees</span>
+                <span>₹27.14</span>
+            </div>
+            <hr>
+            <div class="price-detail" style="font-weight: bold;">
+                <span>Total</span>
+                <span>₹204.14</span>
+            </div>
+            <a href="b3.html">
+            <button class="pay-button" onclick="proceedToPay()">Proceed to Pay ₹204.14</button>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function proceedToPay() {
+            alert("Redirecting to payment gateway...");
+        }
+    </script>
+</body>
+</html>
